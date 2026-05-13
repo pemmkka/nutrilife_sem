@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriLife - Rekomendasi Makanan</title>
+    <script>
+        // Terapkan tema secara instan sebelum halaman dirender untuk mencegah "flash"
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "light");
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="custom-logo"><div class="logo-leaf"></div></div>
+            <h2 class="logo-text">Nutri<span>Life</span></h2>
+        </div>
+        <div class="nav-right">
+            <button class="search-btn">🔍</button>
+            <div class="theme-control-nav">
+                <input type="checkbox" id="theme-toggle" hidden />
+                <label for="theme-toggle" class="theme-btn-nav"><span class="theme-icon">☀️</span></label>
+            </div>
+        </div>
+    </nav>
+
+    <div id="app" class="app-wrapper hidden fade-init">
+
+    <main class="home-container">
+        <!-- Section Riwayat Kesehatan -->
+        <section class="health-search-section">
+            <div class="health-search-card">
+                <h2 class="target-title">Riwayat <span>Kesehatan</span></h2>
+                <p class="loading-msg" style="text-align: left; margin-bottom: 15px; opacity: 0.8;">
+                    Masukkan kondisi kesehatan Anda (misal: diabetes, jantung, anemia) untuk rekomendasi menu yang tepat.
+                </p>
+                <div class="health-search-box">
+                    <input type="text" id="health-query" placeholder="Cari manfaat kesehatan...">
+                    <button id="search-health-btn">Cari Menu</button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Daftar Menu -->
+        <section class="recommendations-section">
+            <h2 class="section-title">Menu <span>Rekomendasi</span></h2>
+            <div class="recommendations-list">
+                <!-- Data dimuat via script.js -->
+            </div>
+        </section>
+    </main>
+    </div>
+
+
+    <nav class="bottom-nav">
+        <div class="nav-item" data-target="home">
+            <span class="icon">🏠</span>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" data-target="nutrition">
+            <span class="icon">🍴</span>
+            <span>Nutrisi</span>
+        </div>
+        <div class="nav-item active" data-target="food">
+            <span class="icon">🥗</span>
+            <span>Makanan</span>
+        </div>
+    </nav>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

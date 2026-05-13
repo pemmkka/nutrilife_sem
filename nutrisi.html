@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriLife - Status Nutrisi</title>
+    <script>
+        // Terapkan tema secara instan sebelum halaman dirender untuk mencegah "flash"
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "light");
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="custom-logo"><div class="logo-leaf"></div></div>
+            <h2 class="logo-text">Nutri<span>Life</span></h2>
+        </div>
+        <div class="nav-right">
+            <button class="search-btn" title="Cari Menu">🔍</button>
+            <div class="theme-control-nav">
+                <input type="checkbox" id="theme-toggle" hidden />
+                <label for="theme-toggle" class="theme-btn-nav"><span class="theme-icon">☀️</span></label>
+            </div>
+        </div>
+    </nav>
+
+    <div id="app" class="app-wrapper hidden fade-init">
+        <main class="nutrisi-main-content">
+            <div class="upload-container">
+                <input type="file" id="imageInput" accept="image/*" class="hidden-section">
+                <button onclick="document.getElementById('imageInput').click()" class="action-btn">
+                    📸 Ambil Foto Makanan
+                </button>
+            </div>
+
+            <div id="image-preview-container" class="image-preview-container">
+                <div id="preview-placeholder" class="preview-placeholder">FOTO</div>
+                <img id="preview-img" src="" alt="Pratinjau Makanan" class="hidden-section">
+            </div>
+
+            <section id="scan-result-section" class="health-search-section">
+                <div class="health-search-card">
+                    <div style="text-align: left; margin-bottom: 20px;">
+                        <p style="font-size: 0.85rem; font-weight: 700; color: var(--text-sub); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Hasil makanan yang dideteksi:</p>
+                        <h2 id="food-name" class="target-title" style="font-size: 1.6rem; color: var(--primary); margin-bottom: 0;">-</h2>
+                    </div>
+                    <div class="nutrition-display">
+                        <div class="res-item">
+                            <b style="color: var(--primary);">💎 Mineral</b>
+                            <span id="res-mineral">-</span>
+                        </div>
+                        <div class="res-item">
+                            <b style="color: var(--primary);">🥩 Protein</b>
+                            <span id="res-protein">-</span>
+                        </div>
+                        <div class="res-item">
+                            <b style="color: var(--primary);">🌾 Karbo</b>
+                            <span id="res-karbo">-</span>
+                        </div>
+                        <div class="res-item">
+                            <b style="color: var(--primary);">🥑 Lemak</b>
+                            <span id="res-lemak">-</span>
+                        </div>
+                        <div class="res-item">
+                            <b style="color: var(--primary);">💊 Vitamin</b>
+                            <span id="res-vitamin">-</span>
+                        </div>
+                        <div class="res-item">
+                            <b style="color: var(--primary);">💧 Air</b>
+                            <span id="res-air">-</span>
+                        </div>
+                        <div class="res-healing-wrapper">
+                            <b style="color: var(--primary); font-size: 0.75rem; display: block; margin-bottom: 5px; text-transform: uppercase;">Manfaat:</b>
+                            <span id="res-healing" style="font-style: italic; color: var(--text-main); font-weight: 500;">-</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Kotak Ringkasan Deskriptif -->
+                    <div style="margin-top: 15px; padding: 15px; background: var(--input-fill); border-radius: 14px; border: 1px dashed var(--primary); text-align: left;">
+                        <b style="color: var(--primary); font-size: 0.7rem; display: block; margin-bottom: 8px;">📝 RINGKASAN ANALISIS</b>
+                        <p id="res-summary-text" style="font-size: 0.85rem; line-height: 1.5;">-</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script type="module" src="nutrisi.js"></script>
+
+    <nav class="bottom-nav">
+        <div class="nav-item" data-target="home">
+            <span class="icon">🏠</span>
+            <span>Home</span>
+        </div>
+        <div class="nav-item active" data-target="nutrition">
+            <span class="icon">🍴</span>
+            <span>Nutrisi</span>
+        </div>
+        <div class="nav-item" data-target="food">
+            <span class="icon">🥗</span>
+            <span>Makanan</span>
+        </div>
+    </nav>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

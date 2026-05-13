@@ -1,0 +1,57 @@
+[
+    {   "jenis": "menu makanan",
+        "type": "Karbohidrat",
+        "name": "Nasi Merah Organik",
+        "image": "https://images.unsplash.com/photo-1512058560366-cd2429598642?auto=format&fit=crop&q=80&w=200",
+        "nutrition": { "karbo": "45g", "protein": "5g", "lemak": "1.6g", "mineral": "2g", "air": "120ml", "vitamin": "B1, B3, B6", "kkal": "215" },
+        "healing": "Menurunkan risiko diabetes tipe 2 dan menjaga kesehatan jantung."
+    },
+    {
+        "jenis": "menu makanan",
+        "type": "Protein",
+        "name": "Ikan Salmon Panggang",
+        "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=200",
+        "nutrition": { "karbo": "0g", "protein": "25g", "lemak": "13g", "mineral": "1.5g", "air": "60ml", "vitamin": "D, B12, Omega-3", "kkal": "208" },
+        "healing": "Mencegah peradangan sendi dan meningkatkan fungsi kognitif otak."
+    },
+    {
+        "jenis": "bahan makanan",
+        "type": "Lemak",
+        "name": "Buah Alpukat Segar",
+        "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&q=80&w=200",
+        "nutrition": { "karbo": "0.12g", "protein": "0.03g", "lemak": "0.21g", "mineral": "0.01g", "air": "1ml", "vitamin": "E, K, B5", "kkal": "2.34" },
+        "healing": "Membantu penyerapan vitamin larut lemak dan menurunkan kolesterol."
+    },
+    {
+        "jenis": "menu makanan",
+        "type": "Mineral",
+        "name": "Bayam Hijau Rebus",
+        "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&q=80&w=200",
+        "nutrition": { "karbo": "7g", "protein": "5g", "lemak": "1g", "mineral": "4g", "air": "150ml", "vitamin": "A, C, K, Zat Besi", "kkal": "41" },
+        "healing": "Membantu pembentukan sel darah merah dan mencegah anemia."
+    },
+    {
+        "type": "Air",
+        "jenis": "bahan makanan",
+        "name": "Semangka Merah",
+        "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&q=80&w=200",
+        "nutrition": { "karbo": "0.11g", "protein": "0.01g", "lemak": "0.002g", "mineral": "0.005g", "air": "2.8ml", "vitamin": "A, C, Likopen", "kkal": "0.46" },
+        "healing": "Menjaga hidrasi tubuh dan membantu detoksifikasi ginjal."
+    },
+    {
+        "jenis": "bahan makanan",
+        "type": "Vitamin",
+        "name": "Jeruk Sunkist",
+        "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&q=80&w=200",
+        "nutrition": { "karbo": "0.15g", "protein": "0.01g", "lemak": "0.001g", "mineral": "0.005g", "air": "1.3ml", "vitamin": "C, Serat", "kkal": "0.62" },
+        "healing": "Meningkatkan daya tahan tubuh terhadap serangan virus dan flu."
+    },
+    {
+        "jenis": "bahan makanan",
+        "type": "Karbohidrat",
+        "name": "Ubi Jalar Ungu",
+        "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=200",
+        "nutrition": { "karbo": "0.25g", "protein": "0.02g", "lemak": "0.001g", "mineral": "0.015g", "air": "0.8ml", "vitamin": "A, Antosianin", "kkal": "1.1" },
+        "healing": "Kaya antioksidan untuk menangkal radikal bebas dan kanker."
+    }
+]

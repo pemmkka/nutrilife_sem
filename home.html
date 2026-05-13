@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriLife - Premium Nutrition</title>
+    <script>
+        // Terapkan tema secara instan sebelum halaman dirender untuk mencegah "flash"
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "light");
+
+        // Sembunyikan loader segera jika sudah pernah berkunjung dalam sesi ini
+        if (sessionStorage.getItem("nutrilife_visited")) {
+            document.write('<style>#loader { display: none !important; }</style>');
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="visual-container">
+                <div class="orbit-spinner"></div>
+                <div class="core-vessel">
+                    <div class="liquid-fill"></div>
+                </div>
+                <div class="floating-nutrients">
+                    <span class="dot d1"></span>
+                    <span class="dot d2"></span>
+                    <span class="dot d3"></span>
+                </div>
+            </div>
+
+            <div class="loader-info">
+                <h2 class="loading-title">Nutri<span>Life</span></h2>
+                <div class="progress-track">
+                    <div class="progress-thumb"></div>
+                </div>
+                <p class="loading-msg">Menghubungkan ke data kesehatan...</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="custom-logo">
+                <div class="logo-leaf"></div>
+            </div>
+            <h2 class="logo-text">Nutri<span>Life</span></h2>
+        </div>
+        <div class="nav-right">
+            <button class="search-btn" title="Cari Menu">🔍</button>
+            <div class="theme-control-nav">
+                <input type="checkbox" id="theme-toggle" hidden />
+                <label for="theme-toggle" class="theme-btn-nav">
+                    <span class="theme-icon">☀️</span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Kontainer Utama (Akan muncul setelah loading) -->
+    <div id="app" class="app-wrapper hidden fade-init">
+        <main class="home-container">
+            <!-- Status Nutrisi Hari Ini -->
+            <section class="nutrition-summary-card">
+                <h2 class="target-title">Status Nutrisi <span>Hari Ini</span></h2>
+                <div id="gauge-container" class="gauge-wrapper">
+                    <!-- Gauge akan diisi via JS -->
+                </div>
+                <div id="legend-container" class="nutrition-legend">
+                    <!-- Legend akan diisi via JS -->
+                </div>
+                
+                <div class="add-nutri-form">
+                    <select id="nutri-type">
+                        <option value="Karbohidrat">Karbohidrat</option>
+                        <option value="Protein">Protein</option>
+                        <option value="Lemak">Lemak</option>
+                        <option value="Air">Air</option>
+                        <option value="Mineral">Mineral</option>
+                        <option value="Vitamin">Vitamin</option>
+                    </select>
+                    <input type="number" id="nutri-value" placeholder="Gram/ml">
+                    <button id="add-nutri-btn">TAMBAH</button>
+                </div>
+            </section>
+
+            <!-- Rekomendasi Pemenuhan Nutrisi -->
+            <section class="recommendations-section">
+                <h2 class="section-title">Rekomendasi <span>Pemenuhan Nutrisi</span></h2>
+                
+                <!-- Horizontal Filter Chips -->
+                <div class="filter-container">
+                    <div class="filter-chips">
+                        <button class="chip active">Rekomendasi Makanan</button>
+                        <button class="chip">Karbohidrat</button>
+                        <button class="chip">Lemak</button>
+                        <button class="chip">Mineral</button>
+                        <button class="chip">Protein</button>
+                        <button class="chip">Air</button>
+                        <button class="chip">Vitamin</button>
+                    </div>
+                </div>
+
+                <!-- Wadah untuk daftar rekomendasi yang akan diisi oleh JavaScript -->
+                <div class="recommendations-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <div class="nav-item active" data-target="home">
+            <span class="icon">🏠</span>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" data-target="nutrition">
+            <span class="icon">🍴</span>
+            <span>Nutrisi</span>
+        </div>
+        <div class="nav-item" data-target="food">
+            <span class="icon">🥗</span>
+            <span>Makanan</span>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
